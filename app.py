@@ -21,8 +21,8 @@ def get_sheet_data():
         return None
 
 def main():
-    st.sidebar.title("導航")
-    mode = st.sidebar.radio("選擇模式", ["首頁", "管理者頁面"])
+    # 移除側邊欄標題，並使用簡潔的選項標籤
+    mode = st.sidebar.radio("請選擇頁面", ["首頁", "管理者頁面"])
 
     # 使用 session_state 來儲存登入狀態
     if 'logged_in' not in st.session_state:
